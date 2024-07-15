@@ -3,12 +3,23 @@ import React from 'react'
 import { FaHeart } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
 import { CiMap } from "react-icons/ci";
+import { motion } from 'framer-motion'
 
 const Card = ({ card }: any) => {
     return (
         <div className='w-full h-[350px] rounded-[20px] p-2 bg-white overflow-hidden flex flex-col gap-3 group cursor-pointer hover:shadow-custom-shadow transition transform duration-300 ease-in-out'>
             <div className='relative w-full h-[80%] rounded-[20px] bg-neutral-200 overflow-hidden'>
-                <Image alt='' src={card?.img} className='w-ful h-full object-cover bg-neutral-200 brightness-110 saturate-150 group-hover:blur-xl' fill />
+                <motion.div
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{
+                        ease: [0.76, 0, 0.24, 1],
+                        duration: 1,
+                    }}
+                    className='overflow-hidden'
+                >
+                    <Image alt='' src={card?.img} className='w-ful h-full object-cover bg-neutral-200 brightness-110 saturate-150 group-hover:blur-xl' fill />
+                </motion.div>
                 <div className='rounded-[20px] group-hover:glass absolute top-0 left-0 w-full h-full flex items-center justify-between flex-col p-5'>
                     <div className='w-full flex flex-row items-center justify-between'>
                         <div className='glass text-white w-10 h-10 rounded-full flex items-center justify-center'>

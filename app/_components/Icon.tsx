@@ -12,7 +12,7 @@ interface IconProps {
 const Icon = ({ icon, title, count, isActive, ttPos }: IconProps) => {
     return (
         <div
-            className={`w-10 h-10 rounded-xl flex items-center justify-center hover:bg-white hover:shadow-custom-shadow cursor-pointer hover:text-[var(--blue)] ${isActive && "shadow-custom-shadow text-[var(--blue)] bg-white"} group`}
+            className={`w-10 h-10 rounded-xl flex items-center justify-center hover:bg-white hover:shadow-custom-shadow cursor-pointer hover:text-[var(--blue)] ${isActive && "shadow-custom-shadow bg-[var(--blue)] text-white "} group`}
             data-tooltip-id="my-tooltip"
             data-tooltip-content={title}
             data-tooltip-place={ttPos || 'right'}
