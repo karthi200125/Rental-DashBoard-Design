@@ -8,12 +8,12 @@ import { MdOutlineDehaze } from "react-icons/md";
 
 const Menu = () => {
     return (
-        <div className="lg:hidden h-screen">
+        <div className="lg:hidden">
             <Sheet>
                 <SheetTrigger asChild>
                     <MdOutlineDehaze size={30} />
                 </SheetTrigger>
-                <SheetContent className="flex w-full h-full md:w-[50%] lg:hidden bg-white p-[16px]">
+                <SheetContent className="flex w-full h-screen md:w-[50%] lg:hidden bg-white p-[16px]">
                     <MobileMenuContent />
                 </SheetContent>
             </Sheet>
