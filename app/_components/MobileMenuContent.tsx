@@ -19,7 +19,7 @@ const MobileMenuContent = () => {
                     </div>
                 </div> */}
                 {Leftbarroutes?.slice(0, 5)?.map((item) => (
-                    <div className='px-5 h-[50px] flex flex-row items-center gap-5 hover:bg-[var(--blue)] hover:text-white group rounded-[10px] hover:shadow-custom-shadow'>
+                    <div key={item?.id} className='px-5 h-[50px] flex flex-row items-center gap-5 hover:bg-[var(--blue)] hover:text-white group rounded-[10px] hover:shadow-custom-shadow'>
                         {item?.icon}
                         <h4>{item?.title}</h4>
                     </div>
@@ -28,7 +28,7 @@ const MobileMenuContent = () => {
             <span className='w-full h-[1px] bg-neutral-200'></span>
             <div className="top flex flex-col gap-2">
                 {Leftbarroutes?.slice(5, 7)?.map((item) => (
-                    <div className='px-5 h-[50px] flex flex-row items-center gap-5 hover:bg-[var(--blue)] hover:text-white group rounded-[10px] hover:shadow-custom-shadow'>
+                    <div key={item?.id} className='px-5 h-[50px] flex flex-row items-center gap-5 hover:bg-[var(--blue)] hover:text-white group rounded-[10px] hover:shadow-custom-shadow'>
                         {item?.icon}
                         <h4>{item?.title}</h4>
                     </div>
