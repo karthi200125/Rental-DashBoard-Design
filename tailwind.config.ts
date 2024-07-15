@@ -8,13 +8,24 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      boxShadow: {
+        'custom-shadow': '10px 10px 20px #babecc, -10px -10px 20px #ffffff',
+      },
+      container: {
+        center: true,
+        padding: "1rem",
+        screens: {
+          "2xl": "1440px",
+        },
+      },
+      colors: {
+        gray: "#f6f6f6",
+        white: "#ffffff",
+        textgray: "#b0b0b0",
       },
     },
   },
   plugins: [],
 };
+
 export default config;
