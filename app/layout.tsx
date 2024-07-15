@@ -26,7 +26,7 @@ export default function RootLayout({
             <Navbar />
             <Filter />
             <div className="relative flex flex-row items-start">
-              <div className="w-full h-full overflow-y-scroll relative flex flex-row bg-gray no-scrollbar sm:custom-scrollbar">
+              <div className="w-full h-full overflow-y-scroll relative flex flex-row bg-gray no-scrollbar md:custom-scrollbar">
                 <Leftbar />
                 {children}
               </div>

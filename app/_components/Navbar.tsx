@@ -2,14 +2,18 @@ import me from '../assets/me.jpg'
 import { NavIcons, NavTopLinks } from '../data'
 import Icon from './Icon'
 import Logo from './Logo'
+import Menu from './Menu'
 
 const Navbar = () => {
     return (
         <div className='z-20 p-[16px] md:p-0 sticky left-0 top-0 w-full h-[80px] bg-white flex flex-row items-center justify-between border-b border-neutral-200'>
             <div className='flex flex-row items-center gap-[50px]'>
-                <Logo />
+                <div className='flex flex-row items-center gap-3'>
+                    <Menu />
+                    <Logo />
+                </div>
                 <span className='hidden lg:flex h-[25px] w-[1px] bg-neutral-200'></span>
-                <div className='hidden lg:flex flex-row items-center gap-5'>
+                <div className='hidden lg:flex flex-row items-center gap-10'>
                     {NavTopLinks?.map((ntl) => (
                         <h5
                             key={ntl?.id}
